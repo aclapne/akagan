@@ -1,0 +1,57 @@
+/* App.css */
+
+/* Google Fonts'tan Poppins fontunu import ediyoruz */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif; /* Tüm uygulama için varsayılan font */
+  background-color: #0f0c29; /* Koyu mavi-mor degrade arka plan */
+  background-image: linear-gradient(315deg, #0f0c29 0%, #302b63 74%);
+  color: #f0e4ff; /* Açık mor tonlarında metin rengi */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #d700ff; /* Neon mor başlıklar */
+  margin-top: 0;
+}
+
+p {
+  color: #e0d5ff; /* Paragraflar için daha yumuşak bir mor */
+  line-height: 1.6;
+  margin: 0 0 15px;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Hover ve geçiş efektleri */
+a {
+  color: #d700ff; /* Neon mor linkler */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff; /* Hover olduğunda beyaz */
+}
+
+/* Küçük ekranlar için uyumlu hale getirme */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}

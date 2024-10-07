@@ -1,0 +1,127 @@
+/* components/Sandbox.css */
+
+/* Ana kapsayıcı */
+.sandbox {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sandbox__container {
+    background-color: #001f3f;
+    padding: 30px;
+    border: 2px solid #0f0c29;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    color: #d700ff;
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+    min-height: 300px;
+}
+
+.sandbox__header,
+.sandbox__content {
+    margin-bottom: 20px;
+}
+
+.sandbox__examples {
+    flex: 1;
+    background-color: #001f3f;
+    padding: 30px;
+    border: 2px solid #0f0c29;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    color: #d700ff;
+    max-width: 500px;
+    text-align: center;
+    min-height: 300px;
+}
+
+.sandbox__examples-title {
+    color: #d700ff;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.sandbox__examples-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* components/Sandbox.css */
+
+.sandbox__examples-content {
+    margin-top: 20px;
+    padding: 20px; /* İçerik kısmı için iç boşluk */
+    border: 2px solid #d700ff; /* Neon mor kenarlık */
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    background-color: #0f0c29; /* Koyu mavi arka plan */
+    color: #f0e4ff; /* Daha açık mor yazı rengi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1; /* Başlangıçta görünür */
+    text-align: left; /* Metni sola hizala */
+    max-width: 100%;
+}
+
+
+.sandbox__examples-content.show {
+    opacity: 1;
+}
+
+.tab-button {
+    background-color: #0f0c29;
+    color: #d700ff;
+    border: 2px solid #d700ff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.tab-button:hover {
+    background-color: #d700ff;
+    color: #0f0c29;
+    transform: scale(1.05);
+}
+.active {
+    background-color: #d700ff;
+    color: #0f0c29;
+    border: 2px solid #d700ff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.tab-button:active {
+    transform: scale(0.95);
+}
+
+/* Küçük ekranlar için düzenleme */
+@media (max-width: 768px) {
+    .sandbox {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sandbox__container,
+    .sandbox__examples {
+        max-width: 100%;
+    }
+}
+.sandbox__examples p {
+    position: relative;
+    top: 20px;
+}
