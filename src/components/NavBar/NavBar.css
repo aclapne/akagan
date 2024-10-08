@@ -1,10 +1,15 @@
-/* components/NavBar.css */
-
 .navbar {
     background-color: #001f3f; /* Mavi arka plan */
     padding: 10px 20px;
     border-radius: 8px; /* Hafif yuvarlak köşeler */
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    position: fixed; /* Ekranın üst kısmına sabitle */
+    top: 10px; /* Üstten hafif boşluk */
+    left: 50%;
+    transform: translateX(-50%); /* Ortada hizala */
+    z-index: 1000; /* Diğer içeriklerin üstünde kalması için */
+    width: calc(100% - 40px); /* Ekran genişliğinin biraz altında tut */
+    max-width: 1200px; /* Maksimum genişlik */
 }
 
 .navbar-menu {
@@ -14,6 +19,7 @@
     margin: 0;
     padding: 0;
     align-items: center;
+    justify-content: center; /* Menü öğelerini ortada hizala */
 }
 
 .navbar-item {
@@ -32,7 +38,17 @@
     border-bottom: 2px solid #d700ff; /* Alt çizgi hover durumunda belirir */
 }
 
+/* Küçük ekranlarda düzen */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+        border-radius: 0; /* Mobilde yuvarlak köşeler kalkar */
+        top: 0; /* Üstten sıfırlanır */
+        width: 100%;
+        left: 0;
+        transform: none; /* Mobilde hizalama kalkar */
+    }
+
     .navbar-menu {
         flex-direction: column; /* Küçük ekranlarda dikey düzen */
         gap: 10px; /* Daha az boşluk */

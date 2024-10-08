@@ -8,7 +8,9 @@ function Header() {
     const description = reactDescription[getRandomInt(2)]
 
     return (
-        <h1>Welcome to my {description}.</h1>
+        <section className={"sandbox__header"}>
+            <h1>Welcome to my {description}.</h1>
+        </section>
     )
 }
 export default Header;

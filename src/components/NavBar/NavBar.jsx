@@ -14,6 +14,9 @@ function NavBar() {
                     <Link to="/Sandbox" className="navbar-link">Sandbox</Link>
                 </li>
                 <li className="navbar-item">
+                    <Link to="/Playground" className="navbar-link">Playground</Link>
+                </li>
+                <li className="navbar-item">
                     <Link to="/About" className="navbar-link">About</Link>
                 </li>
             </ul>
