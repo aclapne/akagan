@@ -1,0 +1,206 @@
+.Calculator {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.5); /* Hafif siyah transparan arka plan */
+}
+
+.calculator-header {
+    width: 33%; /* Genişlik sabit */
+    height: 93%; /* Yükseklik sabit */
+    top: 6%; /* Yükseklik sabit */
+    left: 3%;
+    position: relative; /* Konumu sabit */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px; /* Hafif yuvarlatılmış köşeler */
+}
+
+.header-tab {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20%; /* Genişlik ve yükseklik sabit */
+    padding: 10px;
+    box-sizing: border-box;
+    top: 1vh;
+}
+
+.calculator-header img {
+    width: 100px; /* Görselin boyutunu sabitle */
+    height: auto;
+    margin: 10px 0;
+}
+
+.header-text {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: #d700ff;
+    text-shadow: 0 0 5px rgba(215, 0, 255, 0.5); /* Hafif neon parlama efekti */
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.input-box {
+    height: 70%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px; /* Kutular arasındaki boşluk */
+    border-radius: 10px;
+}
+
+.input-tab {
+    border: 2px solid #d700ff;
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a2e;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(215, 0, 255, 0.3); /* Hafif neon gölge efekti */
+}
+
+.input-tab:hover {
+    transform: scale(1.05);
+    border-color: #db00f6; /* Hover olduğunda kenarlık rengi */
+    box-shadow: 0 6px 10px rgba(215, 0, 255, 0.5); /* Hover durumunda daha belirgin gölge */
+}
+
+.input-p {
+    font-size: 1.2rem;
+    color: #d700ff; /* Neon mor yazı rengi */
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    text-shadow: 0 0 4px rgba(215, 0, 255, 0.5); /* Neon parlama efekti */
+    font-weight: bold;
+}
+
+.input-tab-box {
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #d700ff;
+    background: #1a1a2e; /* Arka plan rengi */
+    color: #d700ff;
+    font-size: 1.2rem; /* Yazı boyutu */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3); /* İçeriden gölge efekti */
+    transition: all 0.3s ease;
+}
+
+.input-tab-box:focus {
+    outline: none;
+    border-color: #db00f6; /* Odaklanıldığında kenarlık rengi */
+    box-shadow: 0 0 8px rgba(215, 0, 255, 0.7); /* Neon parlama efekti */
+}
+
+.input-tab-box::placeholder {
+    color: #999;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.input-tab-box:focus::placeholder {
+    opacity: 0.4;
+}
+
+.calculator-table {
+    position: relative;
+    width: 36%;
+    height: 93vh;
+    top: 6vh;
+    right: 3%;
+    background: #1a1a2e; /* Arka plan rengi */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.table-rows {
+    border: 1px solid #d700ff;
+    background: rgba(26, 26, 46, 0.9);
+    color: #d700ff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100px;
+}
+
+.table-rows h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 5px;
+    text-shadow: 0 0 4px rgba(215, 0, 255, 0.5);
+    color: #db00f6;
+    height: 60px;
+    position:relative;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    right: 5px;
+    border-bottom: 2px solid #db00f6;
+    padding-bottom: 10px;
+}
+
+
+.table-rows p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #db00f6;
+    width: 100%;
+    border-bottom: #d700ff 2px solid;
+    padding-top: 5px;
+}
+
+/* Input oklarını gizlemek için */
+.Calculator input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.Calculator input[type="number"] {
+    -moz-appearance: textfield; /* Firefox için */
+}
+/* Responsive NavBar adjustments */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 10px; /* Reduce padding */
+    }
+    .nav-item {
+        font-size: 0.9rem; /* Smaller text size */
+        margin: 5px 0; /* Adjust spacing */
+    }
+}

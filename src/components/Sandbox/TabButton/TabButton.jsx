@@ -1,12 +1,11 @@
-function TabButton({ children, ...props,isSelected }) {
-
-    return (
-        <li className="tab-button-item">
-            <button className={isSelected ? "active" : "tab-button"}{...props}>
-                {children}
-            </button>
-        </li>
-    );
+function TabButton({ children, isSelected, ...props }) {
+  return (
+    <li className="tab-button-item">
+      <button className={isSelected ? 'active' : 'tab-button'} {...props}>
+        {children}
+      </button>
+    </li>
+  );
 }
 
 export default TabButton;

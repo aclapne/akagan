@@ -1,57 +1,51 @@
 .navbar {
-    background-color: #001f3f; /* Mavi arka plan */
-    padding: 10px 20px;
-    border-radius: 8px; /* Hafif yuvarlak köşeler */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
-    position: fixed; /* Ekranın üst kısmına sabitle */
-    top: 10px; /* Üstten hafif boşluk */
-    left: 50%;
-    transform: translateX(-50%); /* Ortada hizala */
-    z-index: 1000; /* Diğer içeriklerin üstünde kalması için */
-    width: calc(100% - 40px); /* Ekran genişliğinin biraz altında tut */
-    max-width: 1200px; /* Maksimum genişlik */
+  background-color: #001f3f; /* Mavi arka plan */
+  padding: 10px 20px;
+  border-radius: 8px; /* Hafif yuvarlak köşeler */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+  position: fixed; /* Ekranın üst kısmına sabitle */
+  top: 10px; /* Üstten hafif boşluk */
+  left: 50%;
+  transform: translateX(-50%); /* Ortada hizala */
+  z-index: 1000; /* Diğer içeriklerin üstünde kalması için */
+  width: calc(100% - 40px); /* Ekran genişliğinin biraz altında tut */
+  max-width: 1200px; /* Maksimum genişlik */
 }
 
 .navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 15px; /* Öğeler arasındaki boşluk */
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center; /* Menü öğelerini ortada hizala */
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Öğeler arasındaki boşluk */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center; /* Menü öğelerini ortada hizala */
 }
 
 .navbar-item {
-    position: relative;
+  position: relative;
 }
 
 .navbar-link {
-    color: #d700ff; /* Neon mor renk */
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.2s ease;
+  color: #d700ff; /* Neon mor renk */
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s ease;
 }
 
 .navbar-link:hover {
-    color: #fff; /* Hover olduğunda beyaz */
-    border-bottom: 2px solid #d700ff; /* Alt çizgi hover durumunda belirir */
+  color: #fff; /* Hover olduğunda beyaz */
+  border-bottom: 2px solid #d700ff; /* Alt çizgi hover durumunda belirir */
 }
 
-/* Küçük ekranlarda düzen */
+/* Responsive NavBar adjustments */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 10px;
-        border-radius: 0; /* Mobilde yuvarlak köşeler kalkar */
-        top: 0; /* Üstten sıfırlanır */
-        width: 100%;
-        left: 0;
-        transform: none; /* Mobilde hizalama kalkar */
-    }
-
-    .navbar-menu {
-        flex-direction: column; /* Küçük ekranlarda dikey düzen */
-        gap: 10px; /* Daha az boşluk */
-        align-items: center;
-    }
+  .nav-container {
+    flex-direction: column;
+    padding: 10px; /* Reduce padding */
+  }
+  .nav-item {
+    font-size: 0.9rem; /* Smaller text size */
+    margin: 5px 0; /* Adjust spacing */
+  }
 }

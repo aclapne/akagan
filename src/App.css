@@ -12,46 +12,20 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  color: #d700ff; /* Neon mor başlıklar */
-  margin-top: 0;
-}
-
-p {
-  color: #e0d5ff; /* Paragraflar için daha yumuşak bir mor */
-  line-height: 1.6;
-  margin: 0 0 15px;
-}
-
-button {
-  font-family: 'Poppins', sans-serif;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Hover ve geçiş efektleri */
-a {
-  color: #d700ff; /* Neon mor linkler */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #fff; /* Hover olduğunda beyaz */
-}
-
-/* Küçük ekranlar için uyumlu hale getirme */
+/* Adjusting for mobile devices */
 @media (max-width: 768px) {
-  .container {
-    padding: 10px;
+  .Calculator {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 10px; /* Reduce padding for smaller screens */
   }
-
-  h1 {
-    font-size: 24px;
+  .calculator-header, .calculator-table {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Adjust height to content */
+  }
+  .calculator-header img {
+    width: 80px; /* Smaller logo size */
+  }
+  .header-text {
+    font-size: 1.2rem; /* Adjust text size */
   }
 }

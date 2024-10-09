@@ -1,347 +1,377 @@
 .playground {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #020312; /* Koyu arka plan */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Başlangıçtan başlar */
-    gap: 20px;
-    padding-top: 80px; /* Header için yukarıdan boşluk */
-    position: relative; /* Log için referans noktası sağlar */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #020312; /* Koyu arka plan */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Başlangıçtan başlar */
+  gap: 20px;
+  padding-top: 80px; /* Header için yukarıdan boşluk */
+  position: relative; /* Log için referans noktası sağlar */
 }
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: -30px; /* Navbar'ın yüksekliğine göre ayarla */
-    color: #d700ff;
+.playground header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: -30px; /* Navbar'ın yüksekliğine göre ayarla */
+  color: #d700ff;
 }
 
 header img {
-    width: 170px; /* Görselin genişliği */
-    height: auto; /* Orantılı yüksekliği */
-    margin-bottom: 20px; /* Görsel ile başlık arasındaki boşluk */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 170px; /* Görselin genişliği */
+  height: auto; /* Orantılı yüksekliği */
+  margin-bottom: 20px; /* Görsel ile başlık arasındaki boşluk */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 header h1 {
-    font-size: 30px; /* Başlığın font boyutu */
-    color: #d700ff;
-    margin: -20px;
-    text-shadow: 0 0 8px rgba(215, 0, 255, 0.7); /* Neon efektli yazı */
+  font-size: 30px; /* Başlığın font boyutu */
+  color: #d700ff;
+  margin: -20px;
+  text-shadow: 0 0 8px rgba(215, 0, 255, 0.7); /* Neon efektli yazı */
 }
-
 
 /* Oyuncular listesi */
 #game-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #111; /* Koyu oyun alanı arka planı */
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(215, 0, 255, 0.7); /* Neon kenarlık */
-    width: 100%;
-    height: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    right: 4%;
-    position: relative;
-    bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #111; /* Koyu oyun alanı arka planı */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(215, 0, 255, 0.7); /* Neon kenarlık */
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  right: 4%;
+  position: relative;
+  bottom: 1%;
 }
 
 #players {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .player-item {
-    background: #1a1a2e;
-    color: #d700ff;
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(215, 0, 255, 0.3);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-    margin: 0 5px;
+  background: #1a1a2e;
+  color: #d700ff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(215, 0, 255, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0 5px;
 }
 
 .player {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .player-name {
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .player-symbol {
-    font-size: 20px;
-    background: #db00f6;
-    color: #15dada;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 40px;
-    scale: 1.2;
-    box-shadow: 0 0 10px rgba(215, 0, 255, 0.5);
+  font-size: 20px;
+  background: #db00f6;
+  color: #15dada;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+  scale: 1.2;
+  box-shadow: 0 0 10px rgba(215, 0, 255, 0.5);
 }
 
 /* Edit butonu için stil */
 .edit-button {
-    background: #db00f6;
-    color: #c6eaea;
-    border: none;
-    border-radius: 8px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-left: 10px;
-    transition: background 0.3s ease, transform 0.3s ease;
+  background: #db00f6;
+  color: #c6eaea;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .edit-button:hover {
-    background: #d700ff;
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(215, 0, 255, 0.5);
+  background: #d700ff;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(215, 0, 255, 0.5);
 }
 
 /* Responsive tasarım */
 @media (max-width: 768px) {
-    #players {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .player-item {
-        margin: 5px 0;
-    }
-}
-
-
-#game-board {
-    display: flex;
+  #players {
     flex-direction: column;
     gap: 10px;
-    list-style: none;
-    width: 100%;
-    padding: 0;
-    max-width: 400px;
-    height: 400px; /* Kare şeklinde bir tahta */
-    margin: auto;
-    background: #111;
+  }
+
+  .player-item {
+    margin: 5px 0;
+  }
+}
+
+#game-board {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  max-width: 400px;
+  height: 400px; /* Kare şeklinde bir tahta */
+  margin: auto;
+  background: #111;
 }
 
 #game-board ol {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 #game-board li {
-    display: flex;
-    flex: 1;
-    gap: 10px;
-    width: 100%;
-    flex-direction: column;
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  width: 100%;
+  flex-direction: column;
 }
 
 #game-board li button {
-    background: #1a1a2e;
-    color: #d700ff;
-    border: 2px solid #d700ff;
-    border-radius: 8px;
-    flex: 1; /* Düğmelerin eşit genişlikte olmasını sağlar */
-    font-size: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-    height: 100%;
+  background: #1a1a2e;
+  color: #d700ff;
+  border: 2px solid #d700ff;
+  border-radius: 8px;
+  flex: 1; /* Düğmelerin eşit genişlikte olmasını sağlar */
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+  cursor: pointer;
+  height: 100%;
 }
 
 #game-board li button:hover {
-    background: #d700ff;
-    color: #1a1a2e;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(215, 0, 255, 0.5);
+  background: #d700ff;
+  color: #1a1a2e;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(215, 0, 255, 0.5);
 }
-
-
-
 
 /* Küçük ekranlar için düzenleme */
 @media (max-width: 768px) {
-    #game-board {
-        max-width: 100%;
-    }
+  #game-board {
+    max-width: 100%;
+  }
 
-    #game-board li button {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
+  #game-board li button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
 }
-
-
 
 /* Küçük ekranlar için düzenleme */
 @media (max-width: 768px) {
-    #players {
-        flex-direction: column;
-        gap: 10px;
-    }
+  #players {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    #players li {
-        margin: 5px 0;
-    }
+  #players li {
+    margin: 5px 0;
+  }
 
-    #game-container {
-        width: 100%;
-        padding: 15px;
-    }
+  #game-container {
+    width: 100%;
+    padding: 15px;
+  }
 
-    #game-container::after {
-        height: 250px; /* Küçük ekranlar için oyun tahtası boyutu */
-        font-size: 20px;
-    }
+  #game-container::after {
+    height: 250px; /* Küçük ekranlar için oyun tahtası boyutu */
+    font-size: 20px;
+  }
 }
 .active {
-    background: #d700ff; /* Arka plan rengini değiştirebiliriz */
-    color: #020312; /* Yazı rengini değiştirebiliriz */
-    box-shadow: 0 0 15px rgba(215, 0, 255, 0.8); /* Neon parlama efekti */
-    transform: scale(1.05); /* Biraz büyüterek dikkat çekmesini sağlarız */
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  background: #d700ff; /* Arka plan rengini değiştirebiliriz */
+  color: #020312; /* Yazı rengini değiştirebiliriz */
+  box-shadow: 0 0 15px rgba(215, 0, 255, 0.8); /* Neon parlama efekti */
+  transform: scale(1.05); /* Biraz büyüterek dikkat çekmesini sağlarız */
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .active .player-symbol {
-    background: #020312; /* Sembolün arka planını değiştiririz */
-    color: #d700ff; /* Sembol rengini değiştiririz */
-    box-shadow: 0 0 20px rgba(215, 0, 255, 0.8); /* Sembolün de parlamasını sağlarız */
+  background: #020312; /* Sembolün arka planını değiştiririz */
+  color: #d700ff; /* Sembol rengini değiştiririz */
+  box-shadow: 0 0 20px rgba(215, 0, 255, 0.8); /* Sembolün de parlamasını sağlarız */
 }
 
-input[type="text"] {
-    background: #1a1a2e; /* Koyu arka plan */
-    color: #d700ff; /* Neon mor yazı rengi */
-    border: 2px solid #d700ff; /* Neon kenarlık */
-    border-radius: 8px; /* Hafif yuvarlatılmış köşeler */
-    padding: 10px 15px; /* İç boşluk */
-    font-size: 16px; /* Yazı boyutu */
-    transition: border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    width: 100%; /* Genişliği doldurması için */
-    max-width: 300px; /* Maksimum genişlik */
-    outline: none; /* Focus durumunda kenarlık kaldırma */
+.playground input[type='text'] {
+  background: #1a1a2e; /* Koyu arka plan */
+  color: #d700ff; /* Neon mor yazı rengi */
+  border: 2px solid #d700ff; /* Neon kenarlık */
+  border-radius: 8px; /* Hafif yuvarlatılmış köşeler */
+  padding: 10px 15px; /* İç boşluk */
+  font-size: 16px; /* Yazı boyutu */
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+  width: 100%; /* Genişliği doldurması için */
+  max-width: 300px; /* Maksimum genişlik */
+  outline: none; /* Focus durumunda kenarlık kaldırma */
 }
 
-input[type="text"]:focus {
-    border-color: #db00f6; /* Focus durumunda kenarlık rengi */
-    background: #020312; /* Focus durumunda daha koyu arka plan */
-    box-shadow: 0 0 10px rgba(215, 0, 255, 0.5); /* Hafif neon parlama efekti */
+.playground input[type='text']:focus {
+  border-color: #db00f6; /* Focus durumunda kenarlık rengi */
+  background: #020312; /* Focus durumunda daha koyu arka plan */
+  box-shadow: 0 0 10px rgba(215, 0, 255, 0.5); /* Hafif neon parlama efekti */
 }
 
-input[type="text"]::placeholder {
-    color: #999; /* Placeholder yazı rengi */
-    opacity: 0.7; /* Hafif transparan */
-    transition: opacity 0.3s ease;
+.playground input[type='text']::placeholder {
+  color: #999; /* Placeholder yazı rengi */
+  opacity: 0.7; /* Hafif transparan */
+  transition: opacity 0.3s ease;
 }
 
-input[type="text"]:focus::placeholder {
-    opacity: 0.4; /* Focus olduğunda placeholder daha soluk görünsün */
+.playground input[type='text']:focus::placeholder {
+  opacity: 0.4; /* Focus olduğunda placeholder daha soluk görünsün */
 }
 
 .log-board {
-    position: absolute;
-    right: 10%; /* Sağdan uzaklık */
-    top: 28.7%; /* Yukarıdan uzaklık */
-    background: #1a1a2e;
-    height: 64%;
-    width: 20%;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(215, 0, 255, 0.7); /* Neon kenarlık */
-    padding: 20px;
-    color: #d700ff;
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* İçerik arasındaki boşluk */
-    overflow-y: auto; /* Taşarsa kaydırma çubuğu */
+  position: absolute;
+  right: 10%; /* Sağdan uzaklık */
+  top: 28.7%; /* Yukarıdan uzaklık */
+  background: #1a1a2e;
+  height: 64%;
+  width: 20%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(215, 0, 255, 0.7); /* Neon kenarlık */
+  padding: 20px;
+  color: #d700ff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* İçerik arasındaki boşluk */
+  overflow-y: auto; /* Taşarsa kaydırma çubuğu */
 }
 
 .log-board h2 {
-    font-size: 18px;
-    margin: 0 0 10px;
-    color: #f0e4ff;
-    text-shadow: 0 0 5px rgba(215, 0, 255, 0.6); /* Neon yazı */
+  font-size: 18px;
+  margin: 0 0 10px;
+  color: #f0e4ff;
+  text-shadow: 0 0 5px rgba(215, 0, 255, 0.6); /* Neon yazı */
 }
 
 .log-board p {
-    font-size: 14px;
-    color: #999;
-    margin: 5px 0;
-    line-height: 1.4;
+  font-size: 14px;
+  color: #999;
+  margin: 5px 0;
+  line-height: 1.4;
 }
 #gameover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Siyah arka plan, %80 şeffaf */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #d700ff; /* Neon mor yazı rengi */
-    text-align: center;
-    z-index: 10; /* Diğer içeriklerin üzerine gelmesi için */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Siyah arka plan, %80 şeffaf */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #d700ff; /* Neon mor yazı rengi */
+  text-align: center;
+  z-index: 10; /* Diğer içeriklerin üzerine gelmesi için */
 }
 
 #gameover h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(215, 0, 255, 0.8); /* Neon gölge efekti */
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(215, 0, 255, 0.8); /* Neon gölge efekti */
 }
 
 #gameover p {
-    font-size: 18px;
-    margin: 10px 0;
+  font-size: 18px;
+  margin: 10px 0;
 }
 
 #gameover button {
-    background: #db00f6;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    box-shadow: 0 0 10px rgba(215, 0, 255, 0.5);
-    transition: background 0.3s ease, transform 0.2s ease;
+  background: #db00f6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(215, 0, 255, 0.5);
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 }
 
 #gameover button:hover {
-    background: #d700ff;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(215, 0, 255, 0.7);
+  background: #d700ff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(215, 0, 255, 0.7);
+}
+/* Adjusting for mobile devices */
+@media (max-width: 768px) {
+  .playground {
+    padding-top: 60px; /* Reduce padding for smaller screens */
+    gap: 10px; /* Reduce gap between elements */
+  }
+  #game-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+  #game-board {
+    height: 300px; /* Smaller board for mobile */
+  }
+  #game-board li button {
+    font-size: 18px; /* Adjust button text size */
+  }
+  .log-board {
+    width: 90%;
+    height: 50%;
+    right: auto;
+    left: 5%;
+  }
 }

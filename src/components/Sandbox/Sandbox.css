@@ -1,184 +1,197 @@
 /* Genel arka plan rengi */
-body {
-    background-color: #2b2e4a; /* Koyu mor arka plan */
-    color: #f0e4ff;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100%; /* Tüm sayfa yüksekliğini kapsar */
+.sandbox main {
+  background-color: #2b2e4a; /* Koyu mor arka plan */
+  color: #f0e4ff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Tüm sayfa yüksekliğini kapsar */
 }
 
 /* Ana kapsayıcı düzeni */
 .sandbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px; /* Sağ ve sol boşluklar azaltıldı */
-    gap: 20px;
-    min-height: 100vh; /* Tam ekran yüksekliği */
-    box-sizing: border-box; /* Paddingleri dahil et */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px; /* Sağ ve sol boşluklar azaltıldı */
+  gap: 20px;
+  min-height: 100vh; /* Tam ekran yüksekliği */
+  box-sizing: border-box; /* Paddingleri dahil et */
 }
 
 /* İçerik ve Examples kapsayıcıları */
 .sandbox__content-wrapper {
-    display: flex;
-    gap: 15px; /* Sağ ve sol öğeler arasındaki boşluk */
-    justify-content: center;
-    width: 100%;
-    max-width: 2000px;
-    flex-grow: 1; /* Yüksekliği dinamik yapar */
+  display: flex;
+  gap: 15px; /* Sağ ve sol öğeler arasındaki boşluk */
+  justify-content: center;
+  width: 100%;
+  max-width: 2000px;
+  flex-grow: 1; /* Yüksekliği dinamik yapar */
 }
 
-.content, .examples {
-    background-color: #3b3172;
-    padding: 2rem;
-    gap: 1rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    flex: 1;
-    max-width: 650px; /* Eşit genişlik sağlamak için */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.content,
+.examples {
+  background-color: #3b3172;
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  max-width: 650px; /* Eşit genişlik sağlamak için */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Başlık ve içerik */
-.content h2, .examples h2 {
-    font-size: 24px;
-    color: #d700ff;
-    text-align: center;
-    margin-bottom: 15px;
+.content h2,
+.examples h2 {
+  font-size: 24px;
+  color: #d700ff;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 /* İçerik listesi */
 .content ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px; /* Öğeler arasındaki boşluk */
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    justify-items: center;
-    flex-grow: 1; /* İçeriğe göre yüksekliği esnek yap */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px; /* Öğeler arasındaki boşluk */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-items: center;
+  flex-grow: 1; /* İçeriğe göre yüksekliği esnek yap */
 }
 
 /* Konsept öğeleri */
 .content li {
-    background-color: #4a3e83;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    height: 250px; /* Daha yüksek bir alan */
+  background-color: #4a3e83;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  width: 100%;
+  height: 250px; /* Daha yüksek bir alan */
 }
 
 .content li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(215, 0, 255, 0.4);
-    color: #d700ff;
-    border: 4px solid #d700ff; /* Neon kenarlık */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(215, 0, 255, 0.4);
+  color: #d700ff;
+  border: 4px solid #d700ff; /* Neon kenarlık */
 }
 
 /* Resimler için dairesel görünüm ve neon çerçeve */
 .content img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Daire şekli */
-    object-fit: cover;
-    border: 4px solid transparent;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 10px rgba(215, 0, 255, 0.5); /* Hafif neon parlama */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Daire şekli */
+  object-fit: cover;
+  border: 4px solid transparent;
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(215, 0, 255, 0.5); /* Hafif neon parlama */
 }
 
 .content li img:hover {
-    border: 4px solid #d700ff; /* Neon kenarlık */
-    box-shadow: 0 0 20px #d700ff; /* Daha belirgin neon parlama */
+  border: 4px solid #d700ff; /* Neon kenarlık */
+  box-shadow: 0 0 20px #d700ff; /* Daha belirgin neon parlama */
 }
 
 /* İçerik kartlarının başlıkları */
 .content h3 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #d700ff;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #d700ff;
 }
 
 .content p {
-    font-size: 14px;
-    color: #cccccc;
-    margin-top: 5px;
-    text-align: center;
+  font-size: 14px;
+  color: #cccccc;
+  margin-top: 5px;
+  text-align: center;
 }
 
 /* Examples alanı */
 .examples-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 10px; /* Daha küçük bir alt boşluk */
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px; /* Daha küçük bir alt boşluk */
 }
 
 .example-button {
-    background-color: #4a3e83;
-    color: #d700ff;
-    border: 2px solid #d700ff;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    font-size: 14px;
+  background-color: #4a3e83;
+  color: #d700ff;
+  border: 2px solid #d700ff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+  font-size: 14px;
 }
 
 .example-button:hover {
-    background-color: #d700ff;
-    color: #4a3e83;
-    transform: scale(1.05);
+  background-color: #d700ff;
+  color: #4a3e83;
+  transform: scale(1.05);
 }
 
 .example-button.active {
-    background-color: #d700ff;
-    color: bisque;
-    transform: scale(1.1);
+  background-color: #d700ff;
+  color: bisque;
+  transform: scale(1.1);
 }
-
 
 /* Seçili içerik bölümü */
 .examples-content {
-    background-color: #031022;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    color: #f0e4ff;
-    text-align: left;
-    max-width: 100%;
-    font-size: 20px;
-    line-height: 1.5;
-    flex-grow: 1; /* İçeriğe göre genişler */
-    border: #d700ff 5px solid;
+  background-color: #031022;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  color: #f0e4ff;
+  text-align: left;
+  max-width: 100%;
+  font-size: 20px;
+  line-height: 1.5;
+  flex-grow: 1; /* İçeriğe göre genişler */
+  border: #d700ff 5px solid;
 }
 
 /* Responsive düzenleme */
 @media (max-width: 768px) {
-    .sandbox__content-wrapper {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .sandbox__content-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .content ul {
-        grid-template-columns: 1fr;
-    }
+  .content ul {
+    grid-template-columns: 1fr;
+  }
 
-    .examples-buttons {
-        flex-direction: column;
-    }
+  .examples-buttons {
+    flex-direction: column;
+  }
 
-    .content, .examples {
-        max-width: 100%;
-    }
+  .content,
+  .examples {
+    max-width: 100%;
+  }
+}
+.sandbox__header{
+  position: relative;
+  top: 20px;
 }

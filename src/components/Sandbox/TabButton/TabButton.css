@@ -2,83 +2,104 @@
 
 /* İçerik geçişi için temel fade-in efekti */
 .fade-in {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .fade-in.show {
-    opacity: 1;
+  opacity: 1;
 }
 
 .main-container {
-    display: flex;
-    gap: 20px; /* Yan yana öğeler arasındaki boşluk */
-    justify-content: center; /* Öğeleri yatayda ortalar */
-    align-items: flex-start; /* Öğelerin üst kısma hizalanmasını sağlar */
-    padding: 20px;
-    max-width: 1200px; /* Maksimum genişlik */
-    margin: 0 auto; /* Ortalar */
+  display: flex;
+  gap: 20px; /* Yan yana öğeler arasındaki boşluk */
+  justify-content: center; /* Öğeleri yatayda ortalar */
+  align-items: flex-start; /* Öğelerin üst kısma hizalanmasını sağlar */
+  padding: 20px;
+  max-width: 1200px; /* Maksimum genişlik */
+  margin: 0 auto; /* Ortalar */
 }
 
-.sandbox-container, #examples {
-    background-color: #001f3f; /* Mavi arka plan */
-    padding: 30px;
-    border: 2px solid #0f0c29; /* Kenar çizgisi: koyu mavi */
-    border-radius: 10px; /* Hafif yuvarlak köşeler */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
-    color: #d700ff; /* Neon mor yazı rengi */
-    flex: 1; /* Eşit genişlik sağlar */
-    max-width: 500px; /* Maksimum genişlik sınırı */
-    text-align: center;
-    min-height: 300px; /* Minimum yükseklik, görünümün dengeli olması için */
+.sandbox-container,
+#examples {
+  background-color: #001f3f; /* Mavi arka plan */
+  padding: 30px;
+  border: 2px solid #0f0c29; /* Kenar çizgisi: koyu mavi */
+  border-radius: 10px; /* Hafif yuvarlak köşeler */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+  color: #d700ff; /* Neon mor yazı rengi */
+  flex: 1; /* Eşit genişlik sağlar */
+  max-width: 500px; /* Maksimum genişlik sınırı */
+  text-align: center;
+  min-height: 300px; /* Minimum yükseklik, görünümün dengeli olması için */
 }
 
 #examples h2 {
-    color: #d700ff; /* Neon mor başlık rengi */
-    margin-bottom: 15px;
-    font-size: 24px;
-    text-align: center; /* Başlığı ortalar */
+  color: #d700ff; /* Neon mor başlık rengi */
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-align: center; /* Başlığı ortalar */
 }
 
 #examples menu {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Butonlar arasındaki boşluk */
-    justify-content: center; /* Butonları ortalar */
-    list-style: none; /* Liste işaretlerini kaldırır */
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Butonlar arasındaki boşluk */
+  justify-content: center; /* Butonları ortalar */
+  list-style: none; /* Liste işaretlerini kaldırır */
+  padding: 0;
+  margin: 0;
 }
 
 .tab-button {
-    background-color: #0f0c29; /* Koyu mavi arka plan */
-    color: #d700ff; /* Neon mor yazı */
-    border: 2px solid #d700ff; /* Neon mor kenar */
-    border-radius: 5px; /* Yuvarlatılmış köşeler */
-    padding: 10px 15px; /* İç dolgu */
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  background-color: #0f0c29; /* Koyu mavi arka plan */
+  color: #d700ff; /* Neon mor yazı */
+  border: 2px solid #d700ff; /* Neon mor kenar */
+  border-radius: 5px; /* Yuvarlatılmış köşeler */
+  padding: 10px 15px; /* İç dolgu */
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .tab-button:hover {
-    background-color: #d700ff; /* Neon mor arka plan */
-    color: #0f0c29; /* Koyu mavi yazı */
-    transform: scale(1.05); /* Hover sırasında butonu büyütme */
+  background-color: #d700ff; /* Neon mor arka plan */
+  color: #0f0c29; /* Koyu mavi yazı */
+  transform: scale(1.05); /* Hover sırasında butonu büyütme */
 }
 
 .tab-button:active {
-    transform: scale(0.95); /* Tıklama sırasında butonu küçültme */
+  transform: scale(0.95); /* Tıklama sırasında butonu küçültme */
 }
 
 /* Küçük ekranlar için düzenleme */
 @media (max-width: 768px) {
-    .main-container {
-        flex-direction: column; /* Küçük ekranlarda alt alta */
-        gap: 20px;
-    }
+  .main-container {
+    flex-direction: column; /* Küçük ekranlarda alt alta */
+    gap: 20px;
+  }
 
-    .sandbox-container, #examples {
-        max-width: 100%; /* Mobilde tam genişlik */
-    }
+  .sandbox-container,
+  #examples {
+    max-width: 100%; /* Mobilde tam genişlik */
+  }
 }
+/* Adjusting for mobile devices */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 10px; /* Reduce padding */
+  }
+  .sandbox-container,
+  #examples {
+    padding: 15px; /* Adjust padding */
+    max-width: 100%;
+  }
+  .tab-button {
+    padding: 8px 10px; /* Adjust button padding */
+    font-size: 12px; /* Smaller text size for buttons */
+  }
+}
+
