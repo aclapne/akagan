@@ -374,4 +374,22 @@ header h1 {
     right: auto;
     left: 5%;
   }
+  @media (max-width: 768px) {
+    .tictactoe-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tictactoe-board {
+      width: 100%;
+      max-width: 350px; /* Adjust as necessary */
+      margin-bottom: 20px; /* Space between board and log */
+    }
+
+    .tictactoe-log {
+      width: 100%;
+      max-width: 350px; /* Adjust to match board width */
+    }
+  }
 }

@@ -5,7 +5,9 @@ import NavBar from "./components/NavBar/NavBar.jsx";
 import Playground from "./components/Playground/Playground.jsx";
 import Sandbox from "./components/Sandbox/Sandbox.jsx";
 import "./App.css";
+import "./index.css";
 import Calculator from "./components/CalculatorApp/Calculator.jsx";
+import Challenges from "./components/Challenges/Challenges.jsx";
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Route path="/sandbox" element={<Sandbox />} />
         <Route path="/playground" element={<Playground />} />
         <Route path="/calculator" element={<Calculator />} />
+        <Route path="/challenges" element={<Challenges />} />
       </Routes>
     </Router>
   );

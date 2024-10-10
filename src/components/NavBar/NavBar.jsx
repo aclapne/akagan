@@ -28,6 +28,11 @@ function NavBar() {
           </Link>
         </li>
         <li className="navbar-item">
+          <Link to={"/Challenges"} className={"navbar-link"}>
+            Challenges
+          </Link>
+        </li>
+        <li className="navbar-item">
           <Link to="/About" className="navbar-link">
             About
           </Link>
